@@ -1,4 +1,4 @@
-import { FaCircle, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { SiGooglecalendar } from "react-icons/si";
 import styled from "styled-components";

@@ -16,9 +16,10 @@ const StyledNavButton = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 8px;
+  padding: 8px 14px;
   color: #e4e4e4;
   cursor: pointer;
+  transition: all 0.1s;
   &:hover {
     background-color: #000;
     color: #fff;
