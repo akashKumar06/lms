@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledNavButton = styled.div`
+const StyledNavButton = styled(Link)`
   // width: 300px; /* Adjust as needed */
   // height: 200px; /* Adjust as needed */
   /* box-sizing: border-box;
@@ -25,8 +26,8 @@ const StyledNavButton = styled.div`
     color: #fff;
   }
 `;
-function NavButton({ children }) {
-  return <StyledNavButton>{children}</StyledNavButton>;
+function NavButton({ children, to }) {
+  return <StyledNavButton to={to}>{children}</StyledNavButton>;
 }
 
 export default NavButton;

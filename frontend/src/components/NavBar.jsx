@@ -1,13 +1,13 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
+import Logo from "./Logo";
+import NavButton from "./NavButton";
 import { MdOutlineBedroomChild, MdOutlineDashboard } from "react-icons/md";
-import NavButton from "../../components/NavButton";
 import { FaClipboardList } from "react-icons/fa";
-import { GrHostMaintenance } from "react-icons/gr";
 import { AiOutlineDollar } from "react-icons/ai";
-import Logo from "../../components/Logo";
-import NavMenu from "../../components/NavMenu";
+import { GrHostMaintenance } from "react-icons/gr";
+import NavMenu from "./NavMenu";
 
-const StyledDashboardNav = styled.div`
+const StyledNavbar = styled.div`
   background-color: #202020;
   grid-column: 1/2;
   display: flex;
@@ -20,35 +20,35 @@ const NavContainer = styled.div`
   gap: 20px;
 `;
 
-function DashboardNav() {
+function NavBar() {
   return (
-    <StyledDashboardNav>
+    <StyledNavbar>
       <Logo />
       <NavContainer>
-        <NavButton>
+        <NavButton to="/dashboard">
           <MdOutlineDashboard />
           Dashboard
         </NavButton>
-        <NavButton>
+        <NavButton to="/rooms">
           <MdOutlineBedroomChild />
           Rooms
         </NavButton>
-        <NavButton>
+        <NavButton to="/attendence">
           <FaClipboardList />
           Attendence
         </NavButton>
-        <NavButton>
+        <NavButton to="/accounts">
           <AiOutlineDollar />
           Accounts
         </NavButton>
-        <NavButton>
+        <NavButton to="/maintanance">
           <GrHostMaintenance />
           Maintanace
         </NavButton>
       </NavContainer>
       <NavMenu />
-    </StyledDashboardNav>
+    </StyledNavbar>
   );
 }
 
-export default DashboardNav;
+export default NavBar;
